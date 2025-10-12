@@ -62,6 +62,6 @@ public class Principal {
         listaDePeliculas.add(otraPelicula);
         System.out.println("Tamaño de la lista: " + listaDePeliculas.size()); // tamaño de la lista
         System.out.println("Película en la posición 1: " + listaDePeliculas.get(0).getNombre()); // obtener elemento en la posición 1
-
+        System.out.println("puto quin lo lea");
     }
 }
