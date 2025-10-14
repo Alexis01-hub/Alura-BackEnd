@@ -1,3 +1,5 @@
+package com.alura.screenmatch.principal;
+
 import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
 import com.alura.screenmatch.calculos.FiltroRecomendacion;
 import com.alura.screenmatch.modelos.Episodio;
@@ -8,9 +10,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
-        miPelicula.setFechaDeLanzamiento(2021);
+        Pelicula miPelicula = new Pelicula("Encanto",2021);
         miPelicula.setDuracionEnMinutos(180);
         System.out.println("Duración de la película: " + miPelicula.getDuracionEnMinutos());
 
@@ -22,18 +22,14 @@ public class Principal {
         System.out.println(miPelicula.calculaMediaEvaluaciones());
 
 
-        Serie lost = new Serie();
-        lost.setNombre("Lost");
-        lost.setFechaDeLanzamiento(2000);
+        Serie lost = new Serie("Lost",2000);
         lost.muestraFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duracion de la série: " + lost.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Avatar");
-        otraPelicula.setFechaDeLanzamiento(2023);
+        Pelicula otraPelicula = new Pelicula("Avatar",2023);
         otraPelicula.setDuracionEnMinutos(200);
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
@@ -45,16 +41,14 @@ public class Principal {
         FiltroRecomendacion filtro = new FiltroRecomendacion();
         filtro.filtra(miPelicula);
 
-        Episodio episodio = new Episodio();
+        Episodio episodio = new Episodio( );
         episodio.setNumero(1);
         episodio.setSerie(lost);
         episodio.setTotalVisualizaciones(300);
         filtro.filtra(episodio);
 
-        var peliculaDeBruno = new Pelicula(); // inferencia de tipo de dato
-        peliculaDeBruno.setNombre("La vida es bella");
+        var peliculaDeBruno = new Pelicula("El viaje de Chihiro",2001); // inferencia de tipo de dato
         peliculaDeBruno.setDuracionEnMinutos(180);
-        peliculaDeBruno.setFechaDeLanzamiento(2001);
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(peliculaDeBruno);
@@ -62,6 +56,8 @@ public class Principal {
         listaDePeliculas.add(otraPelicula);
         System.out.println("Tamaño de la lista: " + listaDePeliculas.size()); // tamaño de la lista
         System.out.println("Película en la posición 1: " + listaDePeliculas.get(0).getNombre()); // obtener elemento en la posición 1
+
+        System.out.println("toString de la Pelicula: "+ listaDePeliculas.get(0).toString());
 
     }
 }
