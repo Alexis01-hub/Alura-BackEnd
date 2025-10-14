@@ -5,6 +5,7 @@ import com.alura.screenmatch.modelos.Serie;
 import com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -29,6 +30,16 @@ public class PrincipalConListas {
             }
         }
 
+        ArrayList<String> listaArtistas = new ArrayList<>();
+        listaArtistas.add("Bruno Mars");
+        listaArtistas.add("Adele");
+        System.out.println(listaArtistas);
 
+        Collections.sort(listaArtistas);
+        System.out.println(listaArtistas);
+
+        Collections.sort(lista);
+        System.out.println("Después de ordenar");
+        System.out.println(lista);
     }
 }
