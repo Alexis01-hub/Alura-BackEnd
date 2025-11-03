@@ -1,0 +1,22 @@
+[
+  {
+    "titulo": "A New Hope",
+    "fecha_lanzamiento": "1977-05-25",
+    "director": "George Lucas"
+  },
+  {
+    "titulo": "The Empire Strikes Back",
+    "fecha_lanzamiento": "1980-05-17",
+    "director": "Irvin Kershner"
+  },
+  {
+    "titulo": "Return of the Jedi",
+    "fecha_lanzamiento": "1983-05-25",
+    "director": "Richard Marquand"
+  },
+  {
+    "titulo": "The Phantom Menace",
+    "fecha_lanzamiento": "1999-05-19",
+    "director": "George Lucas"
+  }
+]
