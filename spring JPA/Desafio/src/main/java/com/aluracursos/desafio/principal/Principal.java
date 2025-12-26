@@ -6,6 +6,7 @@ import com.aluracursos.desafio.repository.CancionRepository;
 import com.aluracursos.desafio.repository.CantanteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -83,6 +84,7 @@ public class Principal {
         }
     }
 
+    @Transactional
     private void agregarCantante() {
         System.out.println("\n--- AGREGAR CANTANTE ---");
         System.out.print("Nombre del cantante: ");
@@ -106,6 +108,7 @@ public class Principal {
         System.out.println("✓ Cantante agregado exitosamente!");
     }
 
+    @Transactional
     private void agregarCancion() {
         System.out.println("\n--- AGREGAR CANCIÓN ---");
 
@@ -190,6 +193,7 @@ public class Principal {
         });
     }
 
+    @Transactional
     private void eliminarCantante() {
         System.out.println("\n--- ELIMINAR CANTANTE ---");
         listarCantantes();
@@ -207,6 +211,7 @@ public class Principal {
         }
     }
 
+    @Transactional
     private void eliminarCancion() {
         System.out.println("\n--- ELIMINAR CANCIÓN ---");
         listarCanciones();
